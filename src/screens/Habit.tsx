@@ -12,8 +12,11 @@ import {
     BackButton,
 } from '../components/BackButton';
 import {
-    ProgressBar,
-} from '../components/ProgressBar';
+    Checkbox,
+} from '../components/Checkbox';
+import {
+    Progress,
+} from '../components/Progress';
 
 interface Params {
   date: string;
@@ -37,6 +40,13 @@ export const Habit = () => {
         <Text className="mt-6 text-zinc-400 font-semibold text-base lowercase">{dayOfWeek}</Text>
 
         <Text className="text-white font-extrabold text-3xl">{dayAndMonth}</Text>
+
+        <Progress progress={30} />
+
+        <View className="mt-6">
+          <Checkbox title="Beber 2L de água" checked={false} />
+          <Checkbox title="Caminhar" checked={true} />
+        </View>
       </ScrollView>
     </View>
   );
