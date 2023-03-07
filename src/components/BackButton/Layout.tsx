@@ -10,7 +10,7 @@ import {
     useNavigation,
 } from '@react-navigation/native';
 
-export const BackButton = () => {
+export const Layout = () => {
   const { goBack } = useNavigation();
   return (
     <TouchableOpacity activeOpacity={0.7} onPress={goBack}>

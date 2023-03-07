@@ -9,8 +9,8 @@ import {
     Home,
 } from '../screens/Home';
 import {
-    New,
-} from '../screens/New';
+    NewHabit,
+} from '../screens/NewHabit';
 
 const { Navigator, Screen } = createNativeStackNavigator();
 
@@ -19,7 +19,7 @@ export const AppRoutes = () => {
     <Navigator screenOptions={{ headerShown: false }}>
       <Screen name="home" component={Home} />
 
-      <Screen name="new" component={New} />
+      <Screen name="new" component={NewHabit} />
 
       <Screen name="habit" component={Habit} />
     </Navigator>

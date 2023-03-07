@@ -16,10 +16,10 @@ import {
 
 import {
     BackButton,
-} from '../components/BackButton';
+} from '../../components/BackButton';
 import {
     Checkbox,
-} from '../components/Checkbox';
+} from '../../components/Checkbox';
 
 const availableWeekDays = [
   "Domingo",
@@ -31,7 +31,7 @@ const availableWeekDays = [
   "Sábado",
 ];
 
-export const New = () => {
+export const Layout = () => {
   const [weekDays, setWeekDays] = useState<number[]>([]);
 
   const handleToggleWeekDay = (weekDayIndex: number) => {

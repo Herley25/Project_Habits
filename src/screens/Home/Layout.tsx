@@ -9,16 +9,16 @@ import {
 
 import {
     HabitDay,
-} from '../components/HabitDay';
+} from '../../components/HabitDay';
 import {
     DAY_SIZE,
-} from '../components/HabitDay/Layout';
+} from '../../components/HabitDay/Layout';
 import {
     Header,
-} from '../components/Header';
+} from '../../components/Header';
 import {
     generateDatesFromYearBeginning,
-} from '../utils/generate-dates-from-year-beginning';
+} from '../../utils/generate-dates-from-year-beginning';
 
 // contante para renderizar os hábitos
 const weekDays = ["D", "S", "T", "Q", "Q", "S", "S"];
@@ -28,8 +28,9 @@ const dateFromYearStart = generateDatesFromYearBeginning();
 const minimumSummaryDatesSizes = 18 * 5;
 const amountOfDaysToFill = minimumSummaryDatesSizes - dateFromYearStart.length;
 
-export const Home = () => {
+export const Layout = () => {
   const { navigate } = useNavigation();
+
   return (
     <View className="flex-1 bg-background px-8 pt-16">
       <Header />

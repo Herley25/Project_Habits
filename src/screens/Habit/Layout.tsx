@@ -10,21 +10,20 @@ import {
 
 import {
     BackButton,
-} from '../components/BackButton';
+} from '../../components/BackButton';
 import {
     Checkbox,
-} from '../components/Checkbox';
+} from '../../components/Checkbox';
 import {
     Progress,
-} from '../components/Progress';
+} from '../../components/Progress';
+import {
+    ILayout,
+} from './types';
 
-interface Params {
-  date: string;
-}
-
-export const Habit = () => {
+export const Layout = () => {
   const route = useRoute();
-  const { date } = route.params as Params;
+  const { date } = route.params as ILayout;
   // Formatação dia da semana
   const parsedDate = dayjs(date);
   const dayOfWeek = parsedDate.format("dddd");
