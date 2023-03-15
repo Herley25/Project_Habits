@@ -5,6 +5,18 @@ import {
     IControllerProps,
 } from './types';
 
-export const Controller = ({ ...rest }: IControllerProps) => {
-  return <Layout {...rest} />;
+export const Controller = ({
+  amountOfHabits = 0,
+  amountCompleted = 0,
+  date,
+  ...rest
+}: IControllerProps) => {
+  return (
+    <Layout
+      {...rest}
+      amountOfHabits={amountOfHabits}
+      amountCompleted={amountCompleted}
+      date={date}
+    />
+  );
 };
