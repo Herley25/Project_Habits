@@ -34,7 +34,15 @@ import {
 } from '../../utils/generate-dates-from-year-beginning';
 
 // contante para renderizar os hábitos
-const weekDays = ["D", "S", "T", "Q", "Q", "S", "S"];
+const weekDays = [
+  { id: 1, day: "D" },
+  { id: 2, day: "S" },
+  { id: 3, day: "T" },
+  { id: 4, day: "Q" },
+  { id: 5, day: "Q" },
+  { id: 6, day: "S" },
+  { id: 7, day: "S" },
+];
 // Pegando a data inicial do ano e a última
 const dateFromYearStart = generateDatesFromYearBeginning();
 // Detalhes da data
@@ -86,11 +94,11 @@ export const Layout = () => {
       <View className="flex-row mt-6 mb-2">
         {weekDays.map((weekDay) => (
           <Text
-            key={weekDay}
+            key={weekDay.id}
             className="text-zinc-400 text-xl font-bold text-center mx-1"
             style={{ width: DAY_SIZE }}
           >
-            {weekDay}
+            {weekDay.day}
           </Text>
         ))}
       </View>
