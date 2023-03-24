@@ -1,3 +1,5 @@
+import 'dayjs/locale/pt-br';
+
 import clsx from 'clsx';
 import dayjs from 'dayjs';
 import {
@@ -58,7 +60,7 @@ export const Layout = () => {
   const parsedDate = dayjs(date);
   // Verifica se o usuário está acessando/visualizando uma data que já está no passado
   const isDateInPast = parsedDate.endOf("day").isBefore(new Date());
-  const dayOfWeek = parsedDate.format("dddd");
+  const dayOfWeek = parsedDate.locale("pt-br").format("dddd");
   const dayAndMonth = parsedDate.format("DD/MM");
 
   const habitsProgress = dayInfo?.possibleHabits.length
